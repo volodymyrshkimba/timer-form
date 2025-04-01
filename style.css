@@ -1,0 +1,489 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f1f1f1;
+  color: #010101;
+  line-height: 1.5;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-section {
+  background: url("./images/phone-bg.png") no-repeat 0px 0px / cover;
+}
+
+.section-container {
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 66px 20px 40px 20px;
+}
+
+.page-logo {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 16px;
+}
+
+.info-list {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.08em;
+  color: #0f7c41;
+}
+
+.info-item {
+  position: relative;
+  display: inline-block;
+  border: 0.4px solid #0f7c41;
+  padding: 4px 8px;
+}
+
+.info-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.info-item::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 2px;
+  top: -1px;
+  left: -1px;
+  background-color: #0f7c41;
+}
+
+.info-item::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 2px;
+  bottom: -1px;
+  left: -1px;
+  background-color: #0f7c41;
+}
+
+.info-item .right-top-dot {
+  position: absolute;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  top: -1px;
+  right: -1px;
+  background-color: #0f7c41;
+}
+
+.info-item .right-bottom-dot {
+  position: absolute;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  bottom: -1px;
+  right: -1px;
+  background-color: #0f7c41;
+}
+
+.info-item-accent {
+  font-weight: 700;
+}
+
+.page-title {
+  font-size: 32px;
+  line-height: 1.25;
+  max-width: 250px;
+  margin-bottom: 16px;
+}
+
+.page-sub-title {
+  margin-bottom: 24px;
+}
+
+.register-wrapper {
+  background-color: #ffffff;
+  padding: 32px 20px;
+  box-shadow: 0 0 20px 0 rgba(15, 124, 65, 0.2);
+}
+
+.register-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.register-button {
+  margin-top: 24px;
+  border: none;
+  background-color: #0f7c41;
+  height: 56px;
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+}
+
+.timer {
+  display: flex;
+  gap: 26px;
+  max-width: 222px;
+  margin: 0 auto;
+}
+
+.timer .field {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.timer .field .value {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.14;
+}
+
+.timer .field:last-child .value {
+  color: #0f7c41;
+}
+
+.timer .field:not(:last-child) .value::after {
+  content: ":";
+  top: 0;
+  right: -15px;
+  position: absolute;
+  color: rgba(1, 1, 1, 0.2);
+}
+
+.timer .field .label {
+  font-weight: 600;
+  font-size: 8px;
+}
+
+.timer-form {
+  display: none;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.timer-form.show-form {
+  display: flex;
+}
+
+.timer-form .field-label input {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 48px;
+  padding-left: 16px;
+  border: none;
+  background-color: #f2f4fa;
+}
+
+.field-label {
+  position: relative;
+}
+
+.timer-form input.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.timer-form .field-label:last-of-type input {
+  background-image: url("./images/flag.jpg");
+  background-repeat: no-repeat;
+  background-position: 16px;
+  padding-left: 48px;
+}
+
+.timer-form input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #767b8e;
+  transform: translateY(2px);
+}
+
+.terms-wrapper {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.terms-checkbox-label {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+}
+
+.terms-checkbox-label .terms-text {
+  font-size: 12px;
+  line-height: 1.33;
+  display: inline-block;
+}
+
+.terms-checkbox-label .link {
+  color: #3577f7;
+}
+
+.custom-terms-checkbox {
+  top: 5px;
+  left: 0;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0f7c41;
+}
+
+.checked-icon {
+  stroke: none;
+}
+
+.terms-checkbox:checked
+  + .terms-checkbox-label
+  .custom-terms-checkbox
+  .checked-icon {
+  stroke: #0f7c41;
+}
+
+.send-form-button {
+  height: 64px;
+  background-color: #0f7c41;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .timer-form {
+    display: flex;
+  }
+
+  .register-button {
+    display: none;
+  }
+
+  .mob-menu-overlay {
+    display: none;
+  }
+
+  .page-section {
+    background: url("./images/tablet-bg.png") no-repeat 0px 0px / cover;
+  }
+
+  .section-container {
+    max-width: 768px;
+    padding: 81px 32px;
+    display: flex;
+    gap: 32px;
+  }
+
+  .page-logo {
+    top: 29px;
+    left: 32px;
+  }
+
+  .page-descr-side {
+    padding-top: 23px;
+    max-width: 336px;
+  }
+
+  .info-list {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .info-item {
+    padding: 6px 16px;
+  }
+
+  .info-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .info-item::before {
+    width: 4px;
+    height: 4px;
+    top: -2px;
+    left: -2px;
+  }
+
+  .info-item::after {
+    width: 4px;
+    height: 4px;
+    bottom: -2px;
+    left: -2px;
+  }
+
+  .info-item .right-top-dot {
+    width: 4px;
+    height: 4px;
+    top: -2px;
+    right: -2px;
+  }
+
+  .info-item .right-bottom-dot {
+    width: 4px;
+    height: 4px;
+    bottom: -2px;
+    right: -2px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    line-height: 1.22;
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-section {
+    background: url("./images/desc-bg.png") no-repeat 0px 0px / cover;
+  }
+
+  .section-container {
+    max-width: 1440px;
+    padding: 110px 112px;
+    gap: 104px;
+  }
+
+  .page-logo {
+    top: 40px;
+    left: 112px;
+  }
+
+  .page-descr-side {
+    padding-top: 48px;
+    max-width: 624px;
+  }
+
+  .info-list {
+    margin-bottom: 40px;
+  }
+
+  .info-item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 30px;
+  }
+
+  .page-title {
+    font-size: 56px;
+    line-height: 1.21;
+    max-width: 624px;
+    margin-bottom: 40px;
+  }
+
+  .page-sub-title {
+    max-width: 450px;
+  }
+
+  .register-wrapper {
+    padding: 52px;
+  }
+
+  .register-title {
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .timer .field .value {
+    font-size: 32px;
+    line-height: 1.12;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mob-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mob-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mob-menu {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 117px 20px;
+  }
+
+  .mob-menu-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+  }
+}
