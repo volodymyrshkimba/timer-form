@@ -57,7 +57,7 @@ a {
 }
 
 .page-section {
-  background: url("./images/phone-bg.png") no-repeat 0px 0px / cover;
+  background: url("../images/phone-bg.png") no-repeat 0px 0px / cover;
 }
 
 .section-container {
@@ -69,7 +69,6 @@ a {
 
 .page-logo {
   position: absolute;
-  z-index: 100;
   top: 20px;
   left: 20px;
   margin-bottom: 16px;
@@ -249,7 +248,7 @@ a {
 }
 
 .timer-form .field-label:last-of-type input {
-  background-image: url("./images/flag.jpg");
+  background-image: url("../images/flag.jpg");
   background-repeat: no-repeat;
   background-position: 16px;
   padding-left: 48px;
@@ -330,7 +329,7 @@ a {
   }
 
   .page-section {
-    background: url("./images/tablet-bg.png") no-repeat 0px 0px / cover;
+    background: url("../images/tablet-bg.png") no-repeat 0px 0px / cover;
   }
 
   .section-container {
@@ -402,7 +401,7 @@ a {
 
 @media screen and (min-width: 1440px) {
   .page-section {
-    background: url("./images/desc-bg.png") no-repeat 0px 0px / cover;
+    background: url("../images/desc-bg.png") no-repeat 0px 0px / cover;
   }
 
   .section-container {
@@ -479,11 +478,15 @@ a {
 
   .mob-menu-close-button {
     position: absolute;
-    top: 20px;
+    top: 28px;
     right: 20px;
     width: 32px;
     height: 32px;
     border: none;
     background: transparent;
+  }
+
+  .page-logo.mob-menu-logo {
+    top: 29px;
   }
 }
