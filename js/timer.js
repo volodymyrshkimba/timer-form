@@ -21,16 +21,22 @@ const addLeadingZero = (value) => {
   return String(value).padStart(2, "0");
 };
 
-const intID = setInterval(() => {
+const updateTimer = () => {
   const targetDate = new Date("2025-05-01T00:00:00Z").getTime();
   const timeToEnd = targetDate - Date.now();
+
+  if (timeToEnd < 1000) {
+    clearInterval(intID);
+    return;
+  }
 
   const timeObj = convertMs(timeToEnd);
   daysEl.textContent = addLeadingZero(timeObj.days);
   hoursEl.textContent = addLeadingZero(timeObj.hours);
   minutesEl.textContent = addLeadingZero(timeObj.minutes);
   secondsEl.textContent = addLeadingZero(timeObj.seconds);
-  if (timeToEnd < 1000) {
-    clearInterval(intID);
-  }
-}, 1000);
+};
+
+updateTimer();
+
+const intID = setInterval(updateTimer, 1000);

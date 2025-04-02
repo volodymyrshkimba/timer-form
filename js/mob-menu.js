@@ -9,7 +9,7 @@ const pageContentWrapper = document.querySelector("#for-append-node");
 
 let isInMenu = false;
 
-registerButton.addEventListener("click", function () {
+const openMobileMenu = function () {
   if (!isInMenu) {
     mobMenuContentWrapper.appendChild(mobMenuContentFor);
     form.classList.add("show-form");
@@ -18,9 +18,9 @@ registerButton.addEventListener("click", function () {
   }
   document.body.classList.add("no-scroll");
   mobMenu.classList.add("open");
-});
+};
 
-mobMenuCloseButton.addEventListener("click", function () {
+const closeMobMenu = function () {
   if (isInMenu) {
     pageContentWrapper.appendChild(mobMenuContentFor);
     form.classList.remove("show-form");
@@ -30,4 +30,14 @@ mobMenuCloseButton.addEventListener("click", function () {
 
   document.body.classList.remove("no-scroll");
   mobMenu.classList.remove("open");
+};
+
+registerButton.addEventListener("click", openMobileMenu);
+
+mobMenuCloseButton.addEventListener("click", closeMobMenu);
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 768) {
+    closeMobMenu();
+  }
 });
