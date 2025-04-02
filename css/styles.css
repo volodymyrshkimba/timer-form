@@ -58,6 +58,7 @@ a {
 
 .page-section {
   background: url("../images/phone-bg.png") no-repeat 0px 0px / cover;
+  height: 100vh;
 }
 
 .section-container {
