@@ -174,6 +174,11 @@ a {
   font-size: 16px;
 }
 
+.register-button:hover,
+.register-button:focus {
+  background-color: #0d6f39;
+}
+
 .timer {
   display: flex;
   gap: 26px;
@@ -228,6 +233,7 @@ a {
   padding-left: 16px;
   border: none;
   background-color: #f2f4fa;
+  font-size: 16px;
 }
 
 .field-label {
@@ -313,6 +319,11 @@ a {
   font-weight: 700;
   font-size: 16px;
   color: #fff;
+}
+
+.send-form-button:hover,
+.send-form-button:focus {
+  background-color: #0d6f39;
 }
 
 @media screen and (min-width: 768px) {
